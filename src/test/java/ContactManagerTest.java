@@ -33,9 +33,9 @@ class ContactManagerTest {
     @Test
     public void shouldCreateContact() {
         contactManager.addContact("Billy", "John", "0879345682");
-        Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
-        Assertions.assertEquals(1, contactManager.getAllContacts().size());
-        Assertions.assertTrue(contactManager.getAllContacts().stream()
+        assertFalse(contactManager.getAllContacts().isEmpty());
+        assertEquals(1, contactManager.getAllContacts().size());
+        assertTrue(contactManager.getAllContacts().stream()
                 .filter(contact -> contact.getFirstName().equals("Billy") &&
                         contact.getLastName().equals("John") &&
                         contact.getPhoneNumber().equals("0879345682"))
